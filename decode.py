@@ -123,7 +123,7 @@ def main(tokens_path, original_path):
     mid = mido.MidiFile(ticks_per_beat=TICKS_PER_BEAT)
     mid.tracks.append(build_track(rh_events, "Piano", with_tempo=True))
     mid.tracks.append(build_track(lh_events, "Piano", with_tempo=False))
-    mid.save("out1.mid")
+    mid.save("out.mid")
     print(f"\nwrote out.mid  ({len(rh_events)} right-hand + {len(lh_events)} left-hand notes)")
 
     # ---- the important part: prove nothing was lost ----
