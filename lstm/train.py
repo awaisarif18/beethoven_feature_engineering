@@ -19,11 +19,11 @@ import torch.nn as nn
 from data import load
 from model import LSTM
 
-EPOCHS = 100
+EPOCHS = 200
 LR = 5e-4                 # = MLP's 5e-3 x 0.1
 HIDDEN = 128
 CLIP = 1.0
-CHECKPOINTS = {2, 100}
+CHECKPOINTS = {2, 100, 200}
 
 # ---- data ----
 encoded, s, train, test, vocab, tok2int, int2tok = load()
