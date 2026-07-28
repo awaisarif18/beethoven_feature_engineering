@@ -1,9 +1,6 @@
 """
 lstm/train.py — train the LSTM on the 70% split; checkpoint at epoch 2 & 100.
 
-Run from the PROJECT ROOT:
-    python lstm/train.py
-
 Trains on the TRAIN region only (teacher forcing: predict each next token from
 the real previous tokens). Every few epochs it also reports TEST loss on the
 held-out 30% — computed by running the whole true sequence with carried memory
@@ -20,7 +17,7 @@ from data import load
 from model import LSTM
 
 EPOCHS = 200
-LR = 5e-4                 # = MLP's 5e-3 x 0.1
+LR = 5e-3                 # = MLP's 5e-3 x 0.1
 HIDDEN = 128
 CLIP = 1.0
 CHECKPOINTS = {2, 100, 200}
